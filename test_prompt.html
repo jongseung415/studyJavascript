@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test prompt</title>
+</head>
+<body>
+    <script>
+        let userName = 'testUser';
+        let message = '해당 설문에 응하시는 분의 나이를 입력해주세요!';
+        //변수 result에는 사용자가 적은 내용이 저장됨
+        let userInputAge = prompt(message, ['예) 21']);
+        function checkUserAge(userInputAge) {
+                let resultMessage;
+                if (userInputAge < 20) {
+                    let positiveMessage = '설문에 참여하실 수 있습니다.';
+                    resultMessage = positiveMessage;
+                } else {
+                    let negativeMessage = '설문에 참여하실 수 없습니다.';
+                    resultMessage = negativeMessage;
+                };
+                return resultMessage;
+            }
+        alert(`${userName}님은 ${checkUserAge(userInputAge)}`);
+        checkUserWill = confirm('설문에 참여하시겠습니까?');
+        if(checkUserWill == true){
+            let hellMessage = "지금부터 설문조사를 시작하겠습니다.";
+            alert(hellMessage);
+        } else {
+            let goodbyMessage = "생각이 바뀌시면 다시 찾아주세요. 감사합니다.";
+            alert(goodbyMessage);
+        }
+    </script>
+    <p>git 사용 팁</p>
+    <ul>깃 지역 저장소 설정 [git init]</ul>
+    <ul>사용자 등록 [git config user.name "사용자 이름"]</ul>
+    <ul>사용자 등록 [git config user.email "이메일 주소"]</ul>
+    <ul>깃 원격 저장소 설정 [git remote add origin {복사한 원격 저장소 주소}]</ul>
+    <ul>프로젝트의 현재 파일 상태를 확인 [git status]</ul>
+    <ul>커밋에 포함될 파일로 등록 [git add "파일명 or 폴더이름"] / [git add .](현재 디렉토리의 전체 파일을 등록)</ul>
+    <ul>커밋 [git commit](커밋 내역 상세 작성), [git commit -m](커밋 메세지 단순 작성)</ul>
+    <ul>프로젝트 작업 이력 확인 [git log --pretty=oneline --graph]</ul>
+    <ul>저장된 커밋을 원격 저장소에 등록 [git push {저장소} {브랜치}]</ul>
+    <ul>원격 저장소 복제 [git clone "원격 저장소 주소" "새로운 저장소 이름"]</ul>
+</body>
+</html>
