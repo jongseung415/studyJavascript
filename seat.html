@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table tr td{
+            border: 1px solid;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -12,18 +17,23 @@
         let colNum = prompt('한 줄에 몇 명씩 앉을지 입력해주세요.');
         let personNum = prompt('인원수를 입력해주세요');
         let rowNum = personNum / colNum;
-
-        for(let i = 0; i <= rowNum; i++){
+        if(rowNum !== 0){
+            rowNum += 1
+        }
+        document.write('<table>');
+        for(let i = 0; i < rowNum; i++){
+            document.write('<tr>');
             for(let j = 1; j <= colNum; j++){
                 if(seatCount < personNum){
                     seatCount++
-                    document.write(seatCount + '번');
+                    document.write('<td>' + seatCount + '번</td>');
                 } else {
                     break;
                 }
             }
-            document.write('<br>');
+            document.write('</tr>');
         }
+        document.write('</table>');
     </script>
 </body>
 </html>
