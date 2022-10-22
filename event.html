@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      ul,li {
+        list-style-type: none;
+        display: block;
+        float: left;
+        padding-left: 10px;
+      }
+      button {
+        border: 1px solid black;
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        width: 200px;
+      }
+      div {
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 620px;
+        height: 300px;
+        margin-top: 50px;
+        margin-left: 20px;
+        position:absolute;
+      } 
+    </style>
+</head>
+<body>
+    <ul id="buttonGroup">
+        <li><button id="changeColor" onclick="changBg('orange')">red</button></li>
+        <li><button id="changeColor" onclick="changBg('red')">orange</button></li>
+        <li><button id="changeColor" onclick="changBg('yellow')">yellow</button></li>
+    </ul>
+    <div id="result">
+    </div>
+    <script>   
+        function changBg(color) {
+            let result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
