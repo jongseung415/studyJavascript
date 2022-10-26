@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desc {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="울라큐브라떼.jfif">
+        <button class="over" id="open" onclick="showDetail()">상세설명</button>
+        <div id="desc">
+            <h4>울라큐브라떼</h4>
+            <p>울라큐브라떼는....</p>
+            <button id="hide" onclick="hideDetail()">상세설명 닫기</button>
+        </div>
+    </div>
+    <script>
+        function showDetail() {
+            let desc = document.querySelector('#desc');
+            let open = document.querySelector('#open');
+            desc.style.display = "block";
+            open.style.display = "none";
+        }
+
+        function hideDetail() {
+            let desc = document.querySelector('#desc');
+            let hide = document.querySelector('#hide');
+            let open = document.querySelector('#open');
+            desc.style.display = "none";
+            hide.style.display = "block";
+            open.style.display = "block";
+        }
+    </script>
+</body>
+</html>

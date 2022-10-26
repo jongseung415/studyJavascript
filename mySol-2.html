@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 입력받은 두 수를 비교해서 더 큰 수를 표시 -->
+    <script>
+        function compareAb(x,y) {
+            if(x !== y) {
+                if (x > y) {
+                    return x;
+                } else {
+                    return y;
+                }
+            }
+        }
+
+        let num1 = parseInt(prompt('x값을 입력해주세요.'));
+        let num2 = parseInt(prompt('y값을 입력해주세요.'));
+        let result = compareAb(num1, num2);
+
+        document.write('<h1> 더 큰 수 찾기</h1>');
+
+        if(num1 === num2){
+            document.write('<p> 두 값이 같습니다, 서로 다른 값을 입력해주세요.</p>');
+        } else {
+            document.write('<p>' + result + '가 더 큰 수입니다.</p>');
+        }
+        
+        console.log(num1);
+        console.log(num2);
+    </script>
+</body>
+</html>
