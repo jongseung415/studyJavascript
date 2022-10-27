@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header {
+            height: 80px;
+            border: 2px solid black;
+            background-color: grey;
+        }
+
+        #choosenMemberName {
+            font: 25px bold;
+            /* color: violet; */
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>꿀빨러 갈 사람</h1>
+    </div>
+
+    <P>오늘의 꿀벌 : <span id="choosenMemberName"></span></P>
+    <script>
+        let magamjo = prompt('마감인 사람의 이름을 입력해주세요.');
+
+        let choosenMemberNum = Math.floor(Math.random()*3 +1);
+        let choosenMemberName;
+        console.log(choosenMemberNum);
+
+        switch(choosenMemberNum) {
+            case 1 : choosenMemberName = "김다인";
+            break;
+            case 2 : choosenMemberName = "오지우";
+            break;
+            case 3 : choosenMemberName = "이종승";
+            break;
+        }
+        console.log(choosenMemberName);
+
+        if(choosenMemberName == magamjo){
+            while (choosenMemberName == magamjo){
+                choosenMemberNum = Math.floor(Math.random()*3 +1);
+
+                switch (choosenMemberNum) {
+                    case 1: choosenMemberName = "김다인";
+                        break;
+                    case 2: choosenMemberName = "오지우";
+                        break;
+                    case 3: choosenMemberName = "이종승";
+                        break;
+                }
+            }
+            if(choosenMemberName != magamjo){
+                document.querySelector('#choosenMemberName').innerHTML = choosenMemberName;
+                if(choosenMemberName == '김다인') {
+                    document.querySelector('#choosenMemberName').style.color = 'green';
+                } else if(choosenMemberName == '오지우') {
+                    document.querySelector('#choosenMemberName').style.color = 'violet';
+                } else {
+                    document.querySelector('#choosenMemberName').style.color = 'black';
+                }
+            }
+        } else {
+            document.querySelector('#choosenMemberName').innerHTML = choosenMemberName;
+            if(choosenMemberName == '김다인') {
+                    document.querySelector('#choosenMemberName').style.color = 'green';
+                } else if(choosenMemberName == '오지우') {
+                    document.querySelector('#choosenMemberName').style.color = 'violet';
+                } else {
+                    document.querySelector('#choosenMemberName').style.color = 'black';
+                }
+        }
+        console.log(choosenMemberName);
+    </script>
+</body>
+</html>

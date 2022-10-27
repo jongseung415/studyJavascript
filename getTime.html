@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outter {
+            border: 1px solid black;
+            border-radius: 60%;
+            width: 300px;
+            height: 300px;
+            background-color: cornflowerblue;
+            position: relative;
+            text-align: center;
+            margin: auto;
+        }
+        h4 {
+            margin-top: 80px;
+        }
+        #accent {
+            color: red;
+            font: 14px bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="outter">
+        <div id="inner">
+            <h4>다이어트</h4>
+            <p><span id="accent"></span>일 연속으로<br>운동을 하셨습니다.<br></p>
+            <p>멋져요!</p>
+        </div>
+    </div>
+    <script>
+        let userInsertDate = prompt('날짜를 입력해주세요[예)0000-00-00]');
+
+
+        let now = new Date();
+        let startDate = new Date(userInsertDate);
+        
+        let toNow = now.getTime();
+        let toStart = startDate.getTime();
+
+        console.log(toNow);
+        console.log(toStart);
+
+        let passedTime = toNow - toStart;
+        let result = Math.round(passedTime/(1000*60*60*24));
+
+        document.querySelector("#accent").innerHTML = result;
+    </script>
+</body>
+</html>
